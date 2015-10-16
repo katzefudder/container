@@ -1,0 +1,12 @@
+web:
+  image: php55
+  ports:
+    - "8080:80"
+  links:
+    - db
+  volumes:
+    - $PWD/../:/var/www
+db:
+  image: mysql/mysql-server:5.5.45
+  environment:
+    MYSQL_DATABASE: db11045405-oa
